@@ -1,0 +1,51 @@
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+.gameboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 400px;
+  height: 400px;
+}
+.row {
+  display: flex;
+}
+.boardsquare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  font-size: 24px;
+  border-style: none;
+}
+.row:nth-child(n) .boardsquare {
+  border-right: solid;
+}
+.row:nth-child(n) .boardsquare:nth-child(3n) {
+  border-right: none;
+}
+.row:not(:last-child) {
+  border-bottom: solid;
+}
+.row button {
+  background-color: white;
+}
+.status {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.results button {
+  font-size: 24px;
+  background-color: white;
+  color: red;
+  border-style: none;
+}
+.results button:hover {
+  text-decoration: underline;
+}
